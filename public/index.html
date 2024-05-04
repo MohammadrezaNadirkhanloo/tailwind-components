@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>test</title>
+  </head>
+  <body>
+    <div
+      class="bg-gradient-to-r from-violet-500 to-fuchsia-500 flex h-screen justify-center items-center"
+    >
+      <div class="space-y-2 relative w-1/2 sm:w-auto" x-data="{ open: false }">
+        <button
+          @click="open = !open"
+          class="z-10 relative inline-flex items-center bg-blue-400 p-4 rounded-lg space-x-2 focus:ring-2 focus:ring-blue-500"
+        >
+          <span class="font-bold">Optins</span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </button>
+        <button
+          @click="open = false"
+          x-show="open"
+          class="inset-0 fixed bg-gray-400 opacity-75 top-0"
+          style="margin: 0"
+        ></button>
+        <div
+          x-show="open"
+          class="bg-white p-2 font-semibold w-full sm:w-64 rounded-xl overflow-hidden absolute border border-violet-500"
+        >
+          <a href="#" class="flex rounded-lg gap-2 p-3 hover:bg-violet-400"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+              />
+            </svg>
+            <span>Edit</span></a
+          >
+          <a href="#" class="flex gap-2 p-3 rounded-lg hover:bg-violet-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+              />
+            </svg>
+            <span>Move</span></a
+          >
+          <a href="#" class="flex gap-2 p-3 rounded-lg hover:bg-violet-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+            <span>Account</span></a
+          >
+          <a
+            href="#"
+            class="flex gap-2 p-3 hover:bg-violet-200 rounded-lg"
+            @click="open = false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-red-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+              />
+            </svg>
+
+            <span class="text-red-600">Delete</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-cyan-500 to-blue-500 flex h-screen justify-center items-center"
+    >
+      <div
+        x-data="{radio : 1 , activestyle : 'ring-2 ring-cyan-700 bg-sky-800 shadow-2xl' }"
+        class="w-screen container md:w-1/2 space-y-5"
+      >
+        <div
+          @click="radio = 1"
+          class="bg-white flex justify-between items-center w-full px-7 py-9 rounded-xl cursor-pointer"
+          :class="radio === 1 ? activestyle :'' "
+        >
+          <div :class="radio === 1 ? 'text-white' :'' " class="text-xl">
+            <p class="font-bold">Startup</p>
+            <span>12GB/6 CPUs · 160 GB SSD disk </span>
+          </div>
+          <div x-show="radio === 1" class="bg-blue-400 rounded-full p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 12.75 6 6 9-13.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          @click="radio = 2"
+          :class="radio === 2 ? activestyle :'' "
+          class="bg-white flex justify-between items-center w-full px-7 py-9 rounded-xl cursor-pointer"
+        >
+          <div :class="radio === 2 ? 'text-white' :'' " class="text-xl">
+            <p class="font-bold">Startup</p>
+            <span>12GB/6 CPUs · 160 GB SSD disk </span>
+          </div>
+          <div x-show="radio === 2" class="bg-blue-400 rounded-full p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 12.75 6 6 9-13.5"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          @click="radio = 3"
+          :class="radio === 3 ? activestyle :'' "
+          class="bg-white flex justify-between items-center w-full px-7 py-9 rounded-xl cursor-pointer"
+        >
+          <div :class="radio === 3 ? 'text-white' :'' " class="text-xl">
+            <p class="font-bold">Startup</p>
+            <span>12GB/6 CPUs · 160 GB SSD disk </span>
+          </div>
+          <div x-show="radio === 3" class="bg-blue-400 rounded-full p-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 12.75 6 6 9-13.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-purple-500 to-pink-500 flex h-screen justify-center items-center"
+    >
+      <div
+        class="bg-white rounded-xl p-3 w-screen md:w-1/2 container space-y-4 shadow-2xl"
+      >
+        <div x-data="{showOne :false }">
+          <div
+            @click="showOne = !showOne"
+            class="inline-flex items-center bg-violet-200 w-full p-3 rounded-lg justify-between text-violet-800 cursor-pointer hover:bg-violet-200/30 transition-all duration-200"
+          >
+            <p class="font-semibold">What is your refund policy?</p>
+            <svg
+              :class="showOne ? 'rotate-180':''"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 transition-all duration-400"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div
+            x-show="showOne"
+            class="text-gray-600 font-semibold px-4 py-3 text-justify"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            explicabo suscipit vel! Porro temporibus maiores minus laborum vitae
+            provident cum?
+          </div>
+        </div>
+        <div x-data="{showTwo :false }">
+          <div
+            @click="showTwo = !showTwo"
+            class="inline-flex items-center bg-violet-200 w-full p-3 rounded-lg justify-between text-violet-800 cursor-pointer hover:bg-violet-200/30 transition-all duration-200"
+          >
+            <p class="font-semibold">Do you offer technical support?</p>
+            <svg
+              :class="showTwo ? 'rotate-180':''"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 transition-all duration-400"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div
+            x-show="showTwo"
+            class="text-gray-600 font-semibold px-4 py-3 text-justify"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            explicabo suscipit vel! Porro temporibus maiores minus laborum vitae
+            provident cum?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-sky-500 to-indigo-500 flex h-screen justify-center items-center"
+    >
+      <div x-data="{box:1}" class="w-screen container md:w-1/2 space-y-2">
+        <div
+          class="flex justify-around gap-3 p-2 rounded-xl text-center font-bold bg-blue-300 text-white"
+        >
+          <button
+           @click="box=1"
+            :class="box===1  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
+          >
+            React
+          </button>
+          <button
+           @click="box=2"
+            :class="box===2  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
+          >
+            Vue
+          </button>
+          <button
+            @click="box=3"
+            :class="box===3  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
+          >
+            Angular
+          </button>
+        </div>
+        <div x-show="box===1" class="bg-white w-full p-2 rounded-xl shadow-xl">
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">Does drinking coffee make you smarter?</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">Does drinking coffee make you smarter?</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div x-show="box===2" class="bg-white w-full p-2 rounded-xl shadow-xl">
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">The most innovative things happening in coffee</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">The most innovative things happening in coffee</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+        <div x-show="box===3" class="bg-white w-full p-2 rounded-xl shadow-xl">
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">Ask Me Anything: 10 answers to your questions about coffee</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
+            <h4 class="font-bold">Ask Me Anything: 10 answers to your questions about coffee</h4>
+            <p class="font-semibold text-gray-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>

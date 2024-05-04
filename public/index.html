@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/build/tailwind.css" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
     <title>test</title>
   </head>
   <body>
     <div
       class="bg-gradient-to-r from-violet-500 to-fuchsia-500 flex h-screen justify-center items-center"
     >
-      <div class="space-y-2 relative" x-data="{ open: false }">
+      <div class="space-y-2 relative w-1/2 sm:w-auto" x-data="{ open: false }">
         <button
           @click="open = !open"
           class="z-10 relative inline-flex items-center bg-blue-400 p-4 rounded-lg space-x-2 focus:ring-2 focus:ring-blue-500"
@@ -39,7 +39,7 @@
         ></button>
         <div
           x-show="open"
-          class="bg-white p-2 font-semibold w-64 rounded-xl overflow-hidden absolute border border-violet-500"
+          class="bg-white p-2 font-semibold w-full sm:w-64 rounded-xl overflow-hidden absolute border border-violet-500"
         >
           <a href="#" class="flex rounded-lg gap-2 p-3 hover:bg-violet-400"
             ><svg
@@ -122,7 +122,7 @@
       class="bg-gradient-to-r from-cyan-500 to-blue-500 flex h-screen justify-center items-center"
     >
       <div
-        x-data="{radio : 1 , activestyle : 'ring-2 ring-cyan-700 bg-sky-800 shadow-2xl' }"
+        x-data="{radio : 1 , activestyle : 'ring-2 ring-cyan-700 bg-sky-900 shadow-2xl' }"
         class="w-1/2 space-y-5"
       >
         <div

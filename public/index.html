@@ -284,27 +284,27 @@
         <div
           class="flex justify-around gap-3 p-2 rounded-xl text-center font-bold bg-blue-300 text-white"
         >
-          <p
+          <button
            @click="box=1"
             :class="box===1  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
-            class="w-full cursor-pointer p-3"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
           >
             React
-          </p>
-          <p
+          </button>
+          <button
            @click="box=2"
             :class="box===2  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
-            class="w-full cursor-pointer p-3"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
           >
             Vue
-          </p>
-          <p
+          </button>
+          <button
             @click="box=3"
             :class="box===3  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
-            class="w-full cursor-pointer p-3"
+            class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
           >
             Angular
-          </p>
+          </button>
         </div>
         <div x-show="box===1" class="bg-white w-full p-2 rounded-xl shadow-xl">
           <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">

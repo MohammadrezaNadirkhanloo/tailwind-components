@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/build/tailwind.css" />
-    <link rel="shortcut icon" href="./assets/img/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
+      type="image/x-icon"
+    />
     <title>Copmonent</title>
   </head>
   <body>
+    <!-- Dropdown Menu -->
     <div
       class="bg-gradient-to-r from-violet-500 to-fuchsia-500 flex h-screen justify-center items-center"
     >
@@ -119,6 +124,7 @@
       </div>
     </div>
 
+    <!-- Radio Group -->
     <div
       class="bg-gradient-to-r from-cyan-500 to-blue-500 flex h-screen justify-center items-center"
     >
@@ -207,6 +213,7 @@
       </div>
     </div>
 
+    <!-- Disclosure -->
     <div
       class="bg-gradient-to-r from-purple-500 to-pink-500 flex h-screen justify-center items-center"
     >
@@ -278,6 +285,7 @@
       </div>
     </div>
 
+    <!-- Tabs -->
     <div
       class="bg-gradient-to-r from-sky-500 to-indigo-500 flex h-screen justify-center items-center"
     >
@@ -286,14 +294,14 @@
           class="flex justify-around gap-3 p-2 rounded-xl text-center font-bold bg-blue-300 text-white"
         >
           <button
-           @click="box=1"
+            @click="box=1"
             :class="box===1  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
             class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
           >
             React
           </button>
           <button
-           @click="box=2"
+            @click="box=2"
             :class="box===2  ? ' bg-white rounded-lg text-blue-500 shadow-lg ' :''"
             class="w-full cursor-pointer p-3 hover:bg-blue-200 rounded-lg hover:text-blue-800"
           >
@@ -323,13 +331,17 @@
         </div>
         <div x-show="box===2" class="bg-white w-full p-2 rounded-xl shadow-xl">
           <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
-            <h4 class="font-bold">The most innovative things happening in coffee</h4>
+            <h4 class="font-bold">
+              The most innovative things happening in coffee
+            </h4>
             <p class="font-semibold text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
           <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
-            <h4 class="font-bold">The most innovative things happening in coffee</h4>
+            <h4 class="font-bold">
+              The most innovative things happening in coffee
+            </h4>
             <p class="font-semibold text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
@@ -337,13 +349,17 @@
         </div>
         <div x-show="box===3" class="bg-white w-full p-2 rounded-xl shadow-xl">
           <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
-            <h4 class="font-bold">Ask Me Anything: 10 answers to your questions about coffee</h4>
+            <h4 class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </h4>
             <p class="font-semibold text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
           <div class="p-3 hover:bg-gray-300 rounded-lg cursor-pointer">
-            <h4 class="font-bold">Ask Me Anything: 10 answers to your questions about coffee</h4>
+            <h4 class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </h4>
             <p class="font-semibold text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
@@ -352,6 +368,315 @@
       </div>
     </div>
 
+    <!-- Slider item -->
+    <div
+      class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% flex h-screen justify-center items-center"
+    >
+      <div class="container relative">
+        <div
+          id="content"
+          class="flex justify-start gap-3 bg-lime-100 rounded-md p-5 flex-nowrap overflow-x-auto scroll-smooth scrollbar"
+        >
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+          <div
+            class="bg-white max-w-64 rounded-xl min-w-52 px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+          >
+            <div>
+              <span
+                class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"
+              >
+                <svg
+                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <!-- ... -->
+                </svg>
+              </span>
+            </div>
+            <h3
+              class="text-slate-900 mt-5 text-base font-medium tracking-tight"
+            >
+              Writes Upside-Down
+            </h3>
+            <p class="text-slate-500 mt-2 text-sm">
+              The Zero Gravity Pen can be used to write in any orientation,
+              including upside-down. It even works in outer space.
+            </p>
+          </div>
+        </div>
+        <div class="absolute end-10 bottom-1">
+          <button onclick="scrollL()" class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-10"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+          </button>
+          <button onclick="scrollR()" class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-10"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./src/js/script.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
   </body>
 </html>
